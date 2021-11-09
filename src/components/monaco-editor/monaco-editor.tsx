@@ -24,8 +24,9 @@ export const theme: ThemeOptions = ${JSON.stringify(themeOptions, null, 2)};
 `;
 };
 
-const overrideOptions = (monaco: any) => {
+const overrideOptions = (monaco: any, OverrideOptions: any) => {
   Object.assign(options, {
+    ...OverrideOptions,
     model:
       monaco.editor.getModel(monaco.Uri.parse("file:///main.tsx")) ||
       monaco.editor.createModel(
@@ -44,7 +45,7 @@ const readOnlyLines = {
   bottom: 1,
 };
 
-const Editor = () => {
+const Editor: React.FC<any> = ({ OverrideOptions, ...props }) => {
   const [initiate, setInitiate] = useState(false);
   const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
   const instanceMonaco = useMonaco();
@@ -150,22 +151,20 @@ const Editor = () => {
   }, [initiate, instanceMonaco]);
 
   return (
-    <div>
-      <div>
-        {!!instanceMonaco && (
-          <MonacoEditor
-            theme={"vs-dark"}
-            height="100vh"
-            path={"file:///main.tsx"}
-            options={overrideOptions(instanceMonaco)}
-            defaultLanguage="typescript"
-            defaultValue={model({})}
-            beforeMount={handleEditorBeforeMount}
-            onMount={handleEditorOnMount}
-          />
-        )}
-      </div>
-    </div>
+    <>
+      {!!instanceMonaco && (
+        <MonacoEditor
+          theme={"vs-dark"}
+          path={"file:///main.tsx"}
+          options={overrideOptions(instanceMonaco, OverrideOptions)}
+          defaultLanguage="typescript"
+          defaultValue={model({})}
+          beforeMount={handleEditorBeforeMount}
+          onMount={handleEditorOnMount}
+          {...props}
+        />
+      )}
+    </>
   );
 };
 

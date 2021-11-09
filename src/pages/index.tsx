@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import dynamic from "next/dynamic";
-// import Image from 'next/image';
+import Main from "@/layout/main";
 
 const MonacoEditor = dynamic(() => import("../components/monaco-editor"), {
   ssr: false,
@@ -15,10 +15,7 @@ const Home: NextPage = () => {
         <meta name="description" content="Mui Theme Simulation" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <MonacoEditor />
-      </main>
+      <Main>Customize your theme and see possibility</Main>
     </div>
   );
 };

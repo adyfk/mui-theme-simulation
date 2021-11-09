@@ -1,31 +1,11 @@
+import { IFileType } from "@/containers/component/component.types";
 import dynamic from "next/dynamic";
 import filesSchema from "../../clone-mui/files-schema.json";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Main from "../../layout/main";
-interface IFileType {
-  name: string;
-  fileName: string;
-}
+
+const Component = dynamic(() => import("@/containers/component"), { ssr: false });
 
 const ComponentName: React.FC<{ name: string; files: IFileType[] }> = ({ name, files }) => {
-  return (
-    <Main>
-      <Grid container spacing={2}>
-        {files.map(({ name: nameComponent }, index) => {
-          const Demo = dynamic(import(`../../clone-mui/demo/${name}/${nameComponent}`), { ssr: false });
-          return (
-            <Grid item key={index} xs={12} md={12} lg={12} sm={12}>
-              <Box mx={2}>
-                <Box>{nameComponent}</Box>
-                <Demo />
-              </Box>
-            </Grid>
-          );
-        })}
-      </Grid>
-    </Main>
-  );
+  return <Component name={name} files={files} />;
 };
 
 export function getStaticProps({ params }: { params: { name: string } }) {

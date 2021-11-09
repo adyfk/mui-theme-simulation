@@ -12,11 +12,11 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-          <meta name="application-name" content="PWA App" />
+          <meta name="application-name" content="MUI Theme Simulation" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-          <meta name="apple-mobile-web-app-title" content="PWA App" />
-          <meta name="description" content="Best PWA App in the world" />
+          <meta name="apple-mobile-web-app-title" content="MUI Theme Simulation" />
+          <meta name="description" content="Best MUI Theme Simulation in the world" />
           <meta name="format-detection" content="telephone=no" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="msapplication-config" content="/icons/browserconfig.xml" />
@@ -35,16 +35,19 @@ export default class MyDocument extends Document {
           <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5" />
           <link rel="shortcut icon" href="/favicon.ico" />
 
-          <meta name="twitter:card" content="summary" />
+          {/* <meta name="twitter:card" content="summary" />
           <meta name="twitter:url" content="https://yourdomain.com" />
           <meta name="twitter:title" content="PWA App" />
           <meta name="twitter:description" content="Best PWA App in the world" />
           <meta name="twitter:image" content="https://yourdomain.com/icons/android-chrome-192x192.png" />
-          <meta name="twitter:creator" content="@DavidWShadow" />
+          <meta name="twitter:creator" content="@DavidWShadow" /> */}
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="PWA App" />
-          <meta property="og:description" content="Best PWA App in the world" />
-          <meta property="og:site_name" content="PWA App" />
+          <meta property="og:title" content="MUI Theme Simulation" />
+          <meta
+            property="og:description"
+            content="Kick off your next great Material-UI project with a customized theme with every possibility"
+          />
+          <meta property="og:site_name" content="MUI Theme Simulation" />
           <meta property="og:url" content="https://yourdomain.com" />
           <meta property="og:image" content="https://yourdomain.com/icons/apple-touch-icon.png" />
 

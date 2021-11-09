@@ -1,4 +1,4 @@
-import * as React from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import AppBar from "@mui/material/AppBar";
@@ -11,19 +11,33 @@ import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import filesSchema from "@/clone-mui/files-schema.json";
 import { useRouter } from "next/router";
+import dynamic from "next/dynamic";
+import { Button } from "@mui/material";
+const ThemeEditor = dynamic(() => import("./content/theme-editor"));
 
 const drawerWidth = 240;
 
 const Main: React.FC = ({ children }) => {
+  const [openEditor, setOpenEditor] = useState(true);
   const router = useRouter();
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box sx={{ display: "flex", position: "relative" }}>
+      <ThemeEditor open={openEditor} setOpen={setOpenEditor} />
       <CssBaseline />
       <AppBar position="fixed" sx={{ zIndex: (theme) => theme.zIndex.drawer + 1 }}>
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Mui Theme Simulation
+            MUI Theme Simulation
+            <Typography sx={{ display: "block" }} variant="caption" noWrap component="a">
+              {`@mui => 5.0.6`}
+            </Typography>
           </Typography>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box>
+            <Button color="inherit" variant="outlined" onClick={() => setOpenEditor(true)}>
+              Theme Editor
+            </Button>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer

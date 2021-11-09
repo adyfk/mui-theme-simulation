@@ -1,6 +1,16 @@
 {
   "name": "mui-theme-simulation",
   "private": true,
+  "description": "A comprehensive tool to customize themes for Material-UI",
+  "author": "Adi Fatkhurozi <ady.fatkhurozi@gmail.com>",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adyfk/mui-theme-simulation"
+  },
+  "bugs": {
+    "url": "https://github.com/adyfk/mui-theme-simulation/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,6 +33,7 @@
     "@mui/icons-material": "^5.0.5",
     "@mui/lab": "*",
     "@mui/material": "^5.0.6",
+    "@stefanprobst/next-error-boundary": "^3.0.2",
     "autosuggest-highlight": "^3.2.0",
     "css-mediaquery": "^0.1.2",
     "date-fns": "^2.25.0",
