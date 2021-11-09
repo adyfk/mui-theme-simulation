@@ -1,11 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import Main from "@/layout/main";
-
-const MonacoEditor = dynamic(() => import("../components/monaco-editor"), {
-  ssr: false,
-});
 
 const Home: NextPage = () => {
   return (
