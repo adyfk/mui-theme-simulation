@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
           <meta property="og:site_name" content="MUI Theme Simulation" />
           <meta property="og:url" content="https://mui-theme-simulation.vercel.app" />
           <meta property="og:image" content="https://mui-theme-simulation.vercel.app/icons/apple-touch-icon.png" />
-
+          <meta name="google-site-verification" content="tpXBTJtnCqrL9b7BsKEuLvI67Vr7M_EzEM7bHRg0h6U" />
           <link rel="apple-touch-startup-image" href="/images/apple_splash_2048.png" sizes="2048x2732" />
           <link rel="apple-touch-startup-image" href="/images/apple_splash_1668.png" sizes="1668x2224" />
           <link rel="apple-touch-startup-image" href="/images/apple_splash_1536.png" sizes="1536x2048" />
