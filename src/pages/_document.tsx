@@ -36,10 +36,10 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.ico" />
 
           {/* <meta name="twitter:card" content="summary" />
-          <meta name="twitter:url" content="https://yourdomain.com" />
+          <meta name="twitter:url" content="https://mui-theme-simulation.vercel.app" />
           <meta name="twitter:title" content="PWA App" />
           <meta name="twitter:description" content="Best PWA App in the world" />
-          <meta name="twitter:image" content="https://yourdomain.com/icons/android-chrome-192x192.png" />
+          <meta name="twitter:image" content="https://mui-theme-simulation.vercel.app/icons/android-chrome-192x192.png" />
           <meta name="twitter:creator" content="@DavidWShadow" /> */}
           <meta property="og:type" content="website" />
           <meta property="og:title" content="MUI Theme Simulation" />
@@ -48,8 +48,8 @@ export default class MyDocument extends Document {
             content="Kick off your next great Material-UI project with a customized theme with every possibility"
           />
           <meta property="og:site_name" content="MUI Theme Simulation" />
-          <meta property="og:url" content="https://yourdomain.com" />
-          <meta property="og:image" content="https://yourdomain.com/icons/apple-touch-icon.png" />
+          <meta property="og:url" content="https://mui-theme-simulation.vercel.app" />
+          <meta property="og:image" content="https://mui-theme-simulation.vercel.app/icons/apple-touch-icon.png" />
 
           <link rel="apple-touch-startup-image" href="/images/apple_splash_2048.png" sizes="2048x2732" />
           <link rel="apple-touch-startup-image" href="/images/apple_splash_1668.png" sizes="1668x2224" />

@@ -18,7 +18,7 @@ const ThemeEditor = dynamic(() => import("./content/theme-editor"));
 const drawerWidth = 240;
 
 const Main: React.FC = ({ children }) => {
-  const [openEditor, setOpenEditor] = useState(true);
+  const [openEditor, setOpenEditor] = useState(false);
   const router = useRouter();
   return (
     <Box sx={{ display: "flex", position: "relative" }}>
